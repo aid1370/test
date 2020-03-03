@@ -40,8 +40,20 @@
 		<td><input name="id"></td>
 	</tr>
 	<tr>
-</table>
+		<td>비밀번호</td>
+		<td><input type="password" name="pwd"></td>
+	</tr>
+	<tr>
+	<td colspan="2">
+		<div align="right">
+			<input type="button" value="로그인" onclick="loginCheck()">&nbsp;
+			<input type="button" value="회원가입" onClick="javascript:location.href='member.jsp'">
+		</div>
+	</td>
+	</tr>
+	</table>
 </form>
+<%} %>
 </div>
 </body>
 </html>
