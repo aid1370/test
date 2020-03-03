@@ -4,10 +4,10 @@
 <jsp:useBean id="mMgr" class="ch14.MemberMgr"/>
 <%
 	request.setCharacterEncoding("EUC-KR");
-	String check = request.getParameter("search");
+	String search = request.getParameter("search");
 	String area3 = null;
 	Vector<ZipcodeBean> vlist = null;
-	if(check.equals("y")){
+	if(search.equals("y")){
 		area3 = request.getParameter("arear3");
 		vlist = mMgr.zipcodeRead(area3);
 	}
@@ -47,7 +47,7 @@ function sendAdd(zipcode, adds){
       </tr>
       <!-- 검색결과 시작 -->
       <%
-      	if(search.equals("y")){
+      	if (search.equals("y")){
       		if(vlist.isEmpty()){
       %>
       <tr>
